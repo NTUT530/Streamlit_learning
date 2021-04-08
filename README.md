@@ -1,7 +1,7 @@
 # Streamlit_learning
 Streamlit practice to make interactive app.....
 
-This is the interactive web build with streamlit to see variation in various parameters to see the change in concrete mix design as per  IS 10262 : 2009(Indian Standard) CONCRETE MIX PROPORTIONS - GUIDELINES (FIRST REVISION)')
+This is the interactive web build with streamlit to see variation in various parameters to see the change in concrete mix design as per  IS 10262 : 2009(Indian Standard) CONCRETE MIX PROPORTIONS - GUIDELINES (FIRST REVISION)').Also you have take reference of IS456:2000 also.
 Please refer the above mentioned codes and standard values given in the various tables.It is solely for the educational purpose....
 
 Go through the link below:
