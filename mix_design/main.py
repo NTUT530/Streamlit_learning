@@ -5,6 +5,8 @@ col1,col2 = st.beta_columns(2)
 with col1:
     Grade_designation = st.selectbox('Grade',['M10','M15','M20','M25','M30','M35','M40'])
 
+#CA = Coarse Aggregate
+#W_C= Water content
 #charact_str = widgets.Dropdown(value = 20,options=[10,15,20,25,30,35,40],description='fck')
 #standard_dev = widgets.FloatSlider(value = 4,options=[3.5,4,5],description='Standard Deviation',style=style)
 #Max_Nominal_size_CA = st.slider('Nominal Max size of Coarse Aggregate',min_value=10,max_value=40,value=20)
@@ -15,7 +17,8 @@ Exposure_Condition = st.selectbox('Exposure Condition',['Mild','Moderate','Sever
 
 #Minimum_Cement_Content = st.selectbox('Min Cement Content:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 
-#Max_WC_Ratio = st.text_area(label='Max WC Ratio',value='0.5')
+#Max_WC_Ratio = st.text_area(label='Max WC Ratio',value='0.5')   ## Maximum water cement ratio from table
+##From IS456:2000
 def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
     ## to change value on max CA size
     if Max_Nominal_size_CA == '20':
@@ -125,6 +128,8 @@ Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,
 col12,col13 = st.beta_columns(2)
 with col12:
     Zone = st.selectbox('Zone_FA',['Zone I','Zone II','Zone III','Zone IV'])
+ 
+##From IS456:2000
 
 def fck_st(Grade_designation):
     if Grade_designation == 'M10':
@@ -159,6 +164,7 @@ def fck_st(Grade_designation):
     return fck
 
 
+##Ratio of volume of coarse aggregate to total volume of aggregate for different zones of fine aggregate table 3 of IS10262:2009
 def Vol_CATA_ratio(Max_Nominal_size_CA,Zone):
     ## to change value on max CA size
     if Max_Nominal_size_CA == '20':
