@@ -160,7 +160,7 @@ def fck_st(Grade_designation):
         charact_str = 40
         standard_dev = 5
         fck = charact_str + 1.65 * standard_dev
-    fck=round(fck,3)
+    fck=round(fck,2)
 
     return fck
 
