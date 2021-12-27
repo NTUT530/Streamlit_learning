@@ -220,7 +220,7 @@ Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='Entrapped_air(%)')
 
 ##
-st.write('<span style="color:red;background:pink">"="*25+"    結果:    "+"="*25</span>',unsafe_allow_html=True)
+st.write('<span style="color:red;background:pink"> 結果:</span>',unsafe_allow_html=True)
 #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
 a=fck_st(Grade_designation)
