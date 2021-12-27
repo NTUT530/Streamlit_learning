@@ -349,7 +349,7 @@ if buttom:
         st.text_input('粗骨料',value=Str_CA)
 
     #st.latex(r'''質量體積比: (kg/m³)''')
-    st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m^3)</b></span></center></font>',unsafe_allow_html=True)
+    st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m³)</b></span></center></font>',unsafe_allow_html=True)
     #
 
     col17,col18,col19 = st.beta_columns(3)
