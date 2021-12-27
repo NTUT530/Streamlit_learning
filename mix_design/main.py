@@ -221,7 +221,7 @@ P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2
 
 ##
 
-st.subheader"="*20,"結果:","="*20)
+st.subheader("="*20,"結果:","="*20)
 
 a=fck_st(Grade_designation)
 b=str(a)
