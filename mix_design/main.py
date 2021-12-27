@@ -11,7 +11,7 @@ with col1:
 #standard_dev = widgets.FloatSlider(value = 4,options=[3.5,4,5],description='Standard Deviation',style=style)
 #Max_Nominal_size_CA = st.slider('Nominal Max size of Coarse Aggregate',min_value=10,max_value=40,value=20)
 with col2:
-    Max_Nominal_size_CA = st.text_input(label='粗骨料的標稱最大尺寸(',value='20')
+    Max_Nominal_size_CA = st.text_input(label='粗骨料的標稱最大尺寸(mm)',value='20')
 
 Exposure_Condition = st.selectbox('曝光條件',['軟','中等','硬','非常硬','極限'])
 
