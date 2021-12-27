@@ -249,7 +249,7 @@ def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,re
     # print('W_C_increase_by : {}'.format(Increase_by))
     Corrected_A = Vol_CA_TA + Increase_by
     # print('Corrected wc : {}'.format(Corrected_A))
-    if Method_placing == 'Pumping':
+    if Method_placing == '電動':
         Total_Vol_CA = 0.9 * Corrected_A
         Vol_FA = 1 - Total_Vol_CA
         # print('Vol_CA_Pumping : {}'.format(Total_Vol_CA))
