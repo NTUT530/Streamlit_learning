@@ -238,7 +238,7 @@ Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,
 Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
-##
+#######################################################################################################################################################################
 st.write('<span style="color:red;background:pink"> 結果:</span>',unsafe_allow_html=True)
 #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
@@ -324,7 +324,7 @@ with col16:
     st.text_input('粗骨料',value=Str_CA)
 
 #st.latex(r'''質量體積比: (kg/m^3)''')
-st.write('<font size="6"><center><b>質量體積比: (kg/m^3)</center></font>',unsafe_allow_html=True)
+st.write('<span style="color:Black;background:pink"><font size="6"><center><b>質量體積比: (kg/m^3)</center></font></span>',unsafe_allow_html=True)
 
 col17,col18,col19 = st.beta_columns(3)
 with col17:
