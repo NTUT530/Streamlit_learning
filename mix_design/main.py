@@ -20,7 +20,7 @@ st.write('<font size="20"><center><b>IS 10262 混凝土混合設計<br>混凝土
 
 col1,col2 = st.beta_columns(2)
 with col1:
-    Grade_designation = st.selectbox('等級',['M10','M15','M20','M25','M30','M35','M40'])
+    Grade_designation = st.selectbox('<font size="14">等級</font>',['M10','M15','M20','M25','M30','M35','M40'])
 
 #CA = Coarse Aggregate
 #W_C= Water content
