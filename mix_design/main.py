@@ -108,11 +108,11 @@ with col4:
 with col5:
     Max_Wcontet_CAgg=c[2]
     g=str(c[2])
-    gg=st.text_input(label='最大水泥重量',value=g)
+    gg=st.text_input(label='最大水泥比重',value=g)
 
 col6,col7 = st.beta_columns(2)
 with col6:
-    Prac_WC_Ratio = st.slider(label='輸入水泥與水比例',value=0.5,min_value=0.4,max_value=0.8)
+    Prac_WC_Ratio = st.slider(label='輸入砂漿比例',value=0.5,min_value=0.4,max_value=0.8)
 with col7:
     Workability = st.slider(value=50.00,min_value=10.00,max_value=500.00,step=5.00,label='坍度(mm)')
 
@@ -123,7 +123,7 @@ with col9:
     reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='減少混泥土配比')
 
 
-Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='Adm_Perct')
+Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='水泥潤滑劑')
 
 col12,col13 = st.beta_columns(2)
 with col12:
