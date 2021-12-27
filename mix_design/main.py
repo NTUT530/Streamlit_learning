@@ -103,12 +103,12 @@ with col3:
 with col4:
     Max_WC_Ratio = c[1]
     f=str(c[1])
-    ff=st.text_input(label='最大比合',value=f)
+    ff=st.text_input(label='最大水泥比例',value=f)
 
 with col5:
     Max_Wcontet_CAgg=c[2]
     g=str(c[2])
-    gg=st.text_input(label='Max_Wcontent_CAgg',value=g)
+    gg=st.text_input(label='最大水泥重量',value=g)
 
 col6,col7 = st.beta_columns(2)
 with col6:
