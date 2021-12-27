@@ -244,6 +244,12 @@ div.stButton > button:first-child {
     background-color: #0099ff;
     color:#ffffff;
 }
+.stButton>button {
+    color: #4F8BF9;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+}
 div.stButton > button:hover {
     background-color: #00ff00;
     color:#ff0000;
