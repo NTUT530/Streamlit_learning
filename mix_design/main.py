@@ -247,7 +247,7 @@ div.stButton > button:first-child {
 .stButton>button {
     color: #4F8BF9;
     border-radius: 50%;
-    font-size:20px;
+    font-size:10px;
     height: 5em;
     width: 5em;
 }
