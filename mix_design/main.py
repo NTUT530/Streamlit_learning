@@ -257,8 +257,8 @@ div.stButton > button:hover {
     }
 </style>""", unsafe_allow_html=True)
 co1, co2, co3 = st.beta_columns(3)
-with col2:
-    st.button("👌")
+with co2:
+    buttom=st.button("👌")
 #buttom=st.button("👌")
 if buttom:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
