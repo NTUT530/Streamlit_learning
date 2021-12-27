@@ -120,7 +120,7 @@ col8,col9 = st.beta_columns(2)
 with col8:
     Method_placing = st.radio('放置方法 :',['手動','電動'])
 with col9:
-    reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='Reduction_WC')
+    reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='減少混泥土配比')
 
 
 Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='Adm_Perct')
