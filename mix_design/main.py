@@ -118,7 +118,7 @@ with col7:
 
 col8,col9 = st.beta_columns(2)
 with col8:
-    Method_placing = st.radio('Method of Placing :',['Manual','Pumping'])
+    Method_placing = st.radio('放置方法 :',['手動','電動'])
 with col9:
     reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='Reduction_WC')
 
