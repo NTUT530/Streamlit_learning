@@ -212,7 +212,7 @@ with col13:
     h_final = st.text_input(label='Ratio of volume of CA and TA : ',value=h)
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
-st.sidebar.subheader('Specific gravity of materials : ')
+st.sidebar.subheader('材料比重 : ')
 Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label='Cement')
 Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='Coarse Aggregate')
 Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,label='Fine Aggregate')
@@ -220,7 +220,7 @@ Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='Entrapped_air(%)')
 
 ##
-st.subheader('Final Output:')
+st.subheader('結果:')
 
 a=fck_st(Grade_designation)
 b=str(a)
