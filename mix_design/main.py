@@ -267,7 +267,7 @@ if buttom:
 
     a=fck_st(Grade_designation)
     b=str(a)
-    st.text_input(label='fck (kN/mm2)',value=b)
+    st.text_input(label='fck (kN/mm²)',value=b)
 
     ##Ratio of aggregates
     def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air):
@@ -348,7 +348,7 @@ if buttom:
     with col16:
         st.text_input('粗骨料',value=Str_CA)
 
-    #st.latex(r'''質量體積比: (kg/m^3)''')
+    #st.latex(r'''質量體積比: (kg/m³)''')
     st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m^3)</b></span></center></font>',unsafe_allow_html=True)
     #
 
