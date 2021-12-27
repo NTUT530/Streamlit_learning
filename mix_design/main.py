@@ -232,7 +232,7 @@ with col13:
     h_final = st.text_input(label='Ratio of volume of CA and TA : ',value=h)#######################################################################################
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
-st.sidebar.subheader.markdown(f'<div style="font-size: medium;text-align: left;color: Blue;">材料比重 :</div>',unsafe_allow_html=True)
+st.sidebar.subheader('材料比重 :')
 Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label="水泥")
 Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='粗骨料')
 Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,label='細骨料')
