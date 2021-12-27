@@ -19,13 +19,13 @@ st.markdown(
 st.write('<font size="20"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 
 
-
+##
 col1,col2 = st.beta_columns(2)
 with col1:
     Grade_designation = st.selectbox('等級',['M10','M15','M20','M25','M30','M35','M40'])
 
-#CA = Coarse Aggregate
-#W_C= Water content
+#CA = Coarse Aggregate (粗骨料)
+#W_C= Water content (含水量)
 #charact_str = widgets.Dropdown(value = 20,options=[10,15,20,25,30,35,40],description='fck')
 #standard_dev = widgets.FloatSlider(value = 4,options=[3.5,4,5],description='Standard Deviation',style=style)
 #Max_Nominal_size_CA = st.slider('Nominal Max size of Coarse Aggregate',min_value=10,max_value=40,value=20)
@@ -228,15 +228,15 @@ with col13:
     Vol_Cata = Vol_CATA_ratio(Max_Nominal_size_CA,Zone)
     Vol_CA_TA=Vol_Cata
     h = str(Vol_Cata)
-    h_final = st.text_input(label='Ratio of volume of CA and TA : ',value=h)
+    h_final = st.text_input(label='Ratio of volume of CA and TA : ',value=h)#######################################################################################
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
 st.sidebar.subheader('材料比重 : ')
-Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label='Cement')
-Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='Coarse Aggregate')
-Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,label='Fine Aggregate')
-Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='Admixture')
-P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='Entrapped_air(%)')
+Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label='水泥')
+Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='粗骨料')
+Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,label='細骨料')
+Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
+P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
 ##
 st.write('<span style="color:red;background:pink"> 結果:</span>',unsafe_allow_html=True)
