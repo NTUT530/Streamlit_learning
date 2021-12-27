@@ -324,7 +324,7 @@ with col16:
     st.text_input('粗骨料',value=Str_CA)
 
 #st.latex(r'''質量體積比: (kg/m^3)''')
-st.write('<span style="color:red;background:pink"> 質量體積比: (kg/m^3)</span>',unsafe_allow_html=True)
+st.write('<span style="color:black;background:pink"> 質量體積比: (kg/m^3)</span>',unsafe_allow_html=True)
 #<font size="6"><center><b></center></font>
 
 col17,col18,col19 = st.beta_columns(3)
