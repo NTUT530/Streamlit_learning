@@ -98,12 +98,12 @@ with col3:
     c=max_CA_change(Max_Nominal_size_CA,Exposure_Condition)
     Minimum_Cement_Content = c[0]
     d=str(c[0])
-    dd=st.text_input(label='Minimum Cement Content',value=d)
+    dd=st.text_input(label='最低水泥含量',value=d)
 
 with col4:
     Max_WC_Ratio = c[1]
     f=str(c[1])
-    ff=st.text_input(label='Max_WC_Ratio',value=f)
+    ff=st.text_input(label='最大WC比例',value=f)
 
 with col5:
     Max_Wcontet_CAgg=c[2]
