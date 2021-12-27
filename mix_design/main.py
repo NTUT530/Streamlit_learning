@@ -20,7 +20,8 @@ st.write('<font size="7"><center><b>IS 10262 混凝土混合設計<br>混凝土�
 
 
 ##
-#li1=st.write('<font size="4">等級</font>',unsafe_allow_html=True)
+li1=st.markdown("""<style>.standard-text{font-size:16px;}.title{font-size:36px;}.sidebar-text{font-size:26px;}. subheader{font-size:20px}
+</style>""",unsafe_allow_html=True)
 col1,col2 = st.beta_columns(2)
 with col1:
     Grade_designation = st.selectbox("等級",['M10','M15','M20','M25','M30','M35','M40'])
