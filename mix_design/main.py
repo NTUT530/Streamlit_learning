@@ -238,7 +238,17 @@ Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,
 Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
-st.markdown(""" div.stButton > button:first-child {background-color: #00cc00;color:white;font-size:20px;height:3em;width:30em;border-radius:10px 10px 10px 10px;}""", unsafe_allow_html=True)
+buttom = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: #0099ff;
+    color:#ffffff;
+}
+div.stButton > button:hover {
+    background-color: #00ff00;
+    color:#ff0000;
+    }
+</style>""", unsafe_allow_html=True)
 #buttom=st.button("👌")
 if buttom:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
