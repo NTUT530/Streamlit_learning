@@ -16,7 +16,7 @@ st.markdown(
 )
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
-st.write('<font size="20"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
+st.write('<font size="18"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 
 
 ##
@@ -238,7 +238,7 @@ Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,
 Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
-st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>最終比例 :</b></span></center></font>',unsafe_allow_html=True)
+st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
 #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
 a=fck_st(Grade_designation)
