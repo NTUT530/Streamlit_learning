@@ -239,7 +239,7 @@ Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
 buttom = st.markdown("""
-<style>
+<center><style>
 div.stButton > button:first-child {
     background-color: #0099ff;
     color:#ffffff;
@@ -255,7 +255,7 @@ div.stButton > button:hover {
     background-color: #00ff00;
     color:#ff0000;
     }
-</style>""", unsafe_allow_html=True)
+</style></center>""", unsafe_allow_html=True)
 buttom=st.button("👌")
 if buttom:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
