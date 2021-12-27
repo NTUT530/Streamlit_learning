@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.header('CONCRETE MIX DESIGN BASED ON IS 10262 : 2009(Indian Standard) CONCRETE MIX PROPORTIONS - GUIDELINES (FIRST REVISION)')
+st.header('基於 IS 10262 的混凝土混合設計：2009（印度標準）混凝土混合比例')
 col1,col2 = st.beta_columns(2)
 with col1:
-    Grade_designation = st.selectbox('Grade',['M10','M15','M20','M25','M30','M35','M40'])
+    Grade_designation = st.selectbox('等級',['M10','M15','M20','M25','M30','M35','M40'])
 
 #CA = Coarse Aggregate
 #W_C= Water content
