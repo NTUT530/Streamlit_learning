@@ -238,109 +238,111 @@ Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,
 Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
-st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
-#st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
+buttom=st.button("送出")
+if buttom:
+    st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
+    #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
-a=fck_st(Grade_designation)
-b=str(a)
-st.text_input(label='fck (kN/mm2)',value=b)
+    a=fck_st(Grade_designation)
+    b=str(a)
+    st.text_input(label='fck (kN/mm2)',value=b)
 
-##Ratio of aggregates
-def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air):
-    adopted_Wc = min(Max_WC_Ratio, Prac_WC_Ratio)  ## lesser value
-    no_5_above_100 = (Workability - 50) / 25  # workability = slump value
-    if Workability > 50:
-        w = Max_Wcontet_CAgg + no_5_above_100 * (3 / 100) * Max_Wcontet_CAgg  ##w = water cement contentto the desirable slump
-        final_water_content = ((100 - reduction) / 100) * w
-    else:
-        w = Workability
-        final_water_content = ((100 - reduction) / 100) * w
+    ##Ratio of aggregates
+    def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air):
+        adopted_Wc = min(Max_WC_Ratio, Prac_WC_Ratio)  ## lesser value
+        no_5_above_100 = (Workability - 50) / 25  # workability = slump value
+        if Workability > 50:
+            w = Max_Wcontet_CAgg + no_5_above_100 * (3 / 100) * Max_Wcontet_CAgg  ##w = water cement contentto the desirable slump
+            final_water_content = ((100 - reduction) / 100) * w
+        else:
+            w = Workability
+            final_water_content = ((100 - reduction) / 100) * w
 
-    # Selection of cement content:
-    Cement_content = final_water_content / adopted_Wc
-    # After selection of zone grade
-    Vol_CA_Total_Aggregate = Vol_CA_TA
-    # print('Factor : {}'.format(i))
+        # Selection of cement content:
+        Cement_content = final_water_content / adopted_Wc
+        # After selection of zone grade
+        Vol_CA_Total_Aggregate = Vol_CA_TA
+        # print('Factor : {}'.format(i))
 
-    W_C_less_by = 0.5 - adopted_Wc
-    # print('W_C_less_by : {}'.format(W_C_less_by))
-    Increase_by = (0.01 / 0.05) * W_C_less_by
-    # print('W_C_increase_by : {}'.format(Increase_by))
-    Corrected_A = Vol_CA_TA + Increase_by
-    # print('Corrected wc : {}'.format(Corrected_A))
-    if Method_placing == '電動':
-        Total_Vol_CA = 0.9 * Corrected_A
-        Vol_FA = 1 - Total_Vol_CA
-        # print('Vol_CA_Pumping : {}'.format(Total_Vol_CA))
-        # print('Vol_FA_Pumping : {}'.format(Vol_FA))
-    else:  ## Manual Method
-        Total_Vol_CA = Corrected_A
-        Vol_FA = 1 - Total_Vol_CA
-        # print('Vol_CA_Manual : {}'.format(Total_Vol_CA))
-        # print('Vol_FA_Manual : {}'.format(Vol_FA))
+        W_C_less_by = 0.5 - adopted_Wc
+        # print('W_C_less_by : {}'.format(W_C_less_by))
+        Increase_by = (0.01 / 0.05) * W_C_less_by
+        # print('W_C_increase_by : {}'.format(Increase_by))
+        Corrected_A = Vol_CA_TA + Increase_by
+        # print('Corrected wc : {}'.format(Corrected_A))
+        if Method_placing == '電動':
+            Total_Vol_CA = 0.9 * Corrected_A
+            Vol_FA = 1 - Total_Vol_CA
+            # print('Vol_CA_Pumping : {}'.format(Total_Vol_CA))
+            # print('Vol_FA_Pumping : {}'.format(Vol_FA))
+        else:  ## Manual Method
+            Total_Vol_CA = Corrected_A
+            Vol_FA = 1 - Total_Vol_CA
+            # print('Vol_CA_Manual : {}'.format(Total_Vol_CA))
+            # print('Vol_FA_Manual : {}'.format(Vol_FA))
 
-    Vol_concrete = 1
-    Vol_cement = (Cement_content / Gc) * (1 / 1000)
-    # print('Vol_cement : {}'.format(Vol_cement))
-    Vol_water = (final_water_content) * (1 / 1000)
-    # print('Vol_water : {}'.format(Vol_water))
-    Mass_chem_admixture = (Mass_Admixture_perc / 100) * Cement_content
-    Vol_chem_admixture = (Mass_chem_admixture / Gxa) * (1 / 1000)
-    # print('Vol_admixture : {}'.format(Vol_chem_admixture ))
-    Vol_ALL_Aggregate = Vol_concrete - (Vol_cement + Vol_water + Vol_chem_admixture + P_Air / 100)
-    Mass_CA = Vol_ALL_Aggregate * Gca * Total_Vol_CA * 1000
-    Mass_FA = Vol_ALL_Aggregate * Gcf * Vol_FA * 1000
+        Vol_concrete = 1
+        Vol_cement = (Cement_content / Gc) * (1 / 1000)
+        # print('Vol_cement : {}'.format(Vol_cement))
+        Vol_water = (final_water_content) * (1 / 1000)
+        # print('Vol_water : {}'.format(Vol_water))
+        Mass_chem_admixture = (Mass_Admixture_perc / 100) * Cement_content
+        Vol_chem_admixture = (Mass_chem_admixture / Gxa) * (1 / 1000)
+        # print('Vol_admixture : {}'.format(Vol_chem_admixture ))
+        Vol_ALL_Aggregate = Vol_concrete - (Vol_cement + Vol_water + Vol_chem_admixture + P_Air / 100)
+        Mass_CA = Vol_ALL_Aggregate * Gca * Total_Vol_CA * 1000
+        Mass_FA = Vol_ALL_Aggregate * Gcf * Vol_FA * 1000
 
-    Cement = Cement_content / 50  ## In bags
-    Cement_pro = Cement_content / Cement_content
-    FA_pro = Mass_FA / Cement_content
-    CA_pro = Mass_CA / Cement_content
+        Cement = Cement_content / 50  ## In bags
+        Cement_pro = Cement_content / Cement_content
+        FA_pro = Mass_FA / Cement_content
+        CA_pro = Mass_CA / Cement_content
 
-    return Cement_pro,FA_pro,CA_pro,Cement_content,final_water_content,adopted_Wc,Mass_CA,Mass_FA,Mass_chem_admixture
+        return Cement_pro,FA_pro,CA_pro,Cement_content,final_water_content,adopted_Wc,Mass_CA,Mass_FA,Mass_chem_admixture
 
-##Cement aggregate ratio:
+    ##Cement aggregate ratio:
 
-Cement = final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air)
-Str_cement = str(Cement[0])
-Str_FA = str(round(Cement[1],1))
-Str_CA = str(round(Cement[2],1))
+    Cement = final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air)
+    Str_cement = str(Cement[0])
+    Str_FA = str(round(Cement[1],1))
+    Str_CA = str(round(Cement[2],1))
 
-Cement_bags = round(Cement[3]/50)
-Str_Cement_Content=str(round(Cement[3],3))+"  ("+str(Cement_bags)+' bags)'
-Str_Water_Content=str(round(Cement[4],3))
-Str_WC_ratio = str(Cement[5])
-Str_CA_Content=str(round(Cement[6]))
-Str_FA_Content=str(round(Cement[7]))
-Str_Admixture = str(round(Cement[8],2))
+    Cement_bags = round(Cement[3]/50)
+    Str_Cement_Content=str(round(Cement[3],3))+"  ("+str(Cement_bags)+' bags)'
+    Str_Water_Content=str(round(Cement[4],3))
+    Str_WC_ratio = str(Cement[5])
+    Str_CA_Content=str(round(Cement[6]))
+    Str_FA_Content=str(round(Cement[7]))
+    Str_Admixture = str(round(Cement[8],2))
 
-#st.subheader('最終比例 :')
-st.write('<font size="5"><center><span style="color:black;background:#DDDDFF"><b>最終比例 :</b></span></center></font>',unsafe_allow_html=True)
+    #st.subheader('最終比例 :')
+    st.write('<font size="5"><center><span style="color:black;background:#DDDDFF"><b>最終比例 :</b></span></center></font>',unsafe_allow_html=True)
 
-col14,col15,col16 = st.beta_columns(3)
-with col14:
-    st.text_input('水泥',value=Str_cement)
-with col15:
-    st.text_input('細骨料',value=Str_FA)
-with col16:
-    st.text_input('粗骨料',value=Str_CA)
+    col14,col15,col16 = st.beta_columns(3)
+    with col14:
+        st.text_input('水泥',value=Str_cement)
+    with col15:
+        st.text_input('細骨料',value=Str_FA)
+    with col16:
+        st.text_input('粗骨料',value=Str_CA)
 
-#st.latex(r'''質量體積比: (kg/m^3)''')
-st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m^3)</b></span></center></font>',unsafe_allow_html=True)
-#
+    #st.latex(r'''質量體積比: (kg/m^3)''')
+    st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m^3)</b></span></center></font>',unsafe_allow_html=True)
+    #
 
-col17,col18,col19 = st.beta_columns(3)
-with col17:
-    st.text_input('水泥', value=Str_Cement_Content)
-with col18:
-    st.text_input('水', value=Str_Water_Content)
-with col19:
-    st.text_input('比例 ', value=Str_WC_ratio)
+    col17,col18,col19 = st.beta_columns(3)
+    with col17:
+        st.text_input('水泥', value=Str_Cement_Content)
+    with col18:
+        st.text_input('水', value=Str_Water_Content)
+    with col19:
+        st.text_input('比例 ', value=Str_WC_ratio)
 
-col20,col21,col22 = st.beta_columns(3)
+    col20,col21,col22 = st.beta_columns(3)
 
-with col20:
-    st.text_input('細骨料', value=Str_FA_Content)
-with col21:
-    st.text_input('中骨料', value=Str_CA_Content)
-with col22:
-    st.text_input('粗骨料', value=Str_Admixture)
+    with col20:
+        st.text_input('細骨料', value=Str_FA_Content)
+    with col21:
+        st.text_input('中骨料', value=Str_CA_Content)
+    with col22:
+        st.text_input('粗骨料', value=Str_Admixture)
