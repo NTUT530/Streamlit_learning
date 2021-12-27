@@ -307,17 +307,17 @@ st.latex(r'''Mass_per_volume : (kg/m^3)''')
 
 col17,col18,col19 = st.beta_columns(3)
 with col17:
-    st.text_input('Cement', value=Str_Cement_Content)
+    st.text_input('水泥', value=Str_Cement_Content)
 with col18:
-    st.text_input('Water', value=Str_Water_Content)
+    st.text_input('水', value=Str_Water_Content)
 with col19:
-    st.text_input('Water ratio ', value=Str_WC_ratio)
+    st.text_input('比例 ', value=Str_WC_ratio)
 
 col20,col21,col22 = st.beta_columns(3)
 
 with col20:
-    st.text_input('Fine Aggregate', value=Str_FA_Content)
+    st.text_input('細骨料', value=Str_FA_Content)
 with col21:
-    st.text_input('Coarse Aggregate', value=Str_CA_Content)
+    st.text_input('中骨料', value=Str_CA_Content)
 with col22:
-    st.text_input('Chemical Admixture', value=Str_Admixture)
+    st.text_input('粗骨料', value=Str_Admixture)
