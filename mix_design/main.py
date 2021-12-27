@@ -5,10 +5,10 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://www.google.com.tw/url?sa=i&url=https%3A%2F%2Fkinmen.travel%2Fzh-tw%2Ftravel%2Fattraction%2F1678&psig=AOvVaw1rxRpmm9CdYlbhzvjbWZ9Q&ust=1640703506504000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj1jYSfhPUCFQAAAAAdAAAAABAb")
+        background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/image.jpg?raw=true")
     }
    .sidebar .sidebar-content {
-        background: url("https://www.google.com.tw/url?sa=i&url=https%3A%2F%2Fkinmen.travel%2Fzh-tw%2Ftravel%2Fattraction%2F1678&psig=AOvVaw1rxRpmm9CdYlbhzvjbWZ9Q&ust=1640703506504000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj1jYSfhPUCFQAAAAAdAAAAABAb")
+        background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/image.jpg?raw=true")
     }
     </style>
     """,
