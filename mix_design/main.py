@@ -1,6 +1,19 @@
 import streamlit as st
 
-st.markdown('<style>body{background-color: #D2E9FF;}</style>',unsafe_allow_html=True)
+#st.markdown('<style>body{background-color: #D2E9FF;}</style>',unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/2960070_2_1.jpg?raw=true")
+    }
+   .sidebar .sidebar-content {
+        background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/2960070_2_1.jpg?raw=true")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.header('基於 IS 10262 的混凝土混合設計：2009（印度標準）混凝土混合比例')
 col1,col2 = st.beta_columns(2)
