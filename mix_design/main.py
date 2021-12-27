@@ -3,7 +3,7 @@ import streamlit as st
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://www.google.com.tw/url?sa=i&url=https%3A%2F%2Fwww.chinatimes.com%2Fhottopic%2F20190820000907-260804&psig=AOvVaw1rxRpmm9CdYlbhzvjbWZ9Q&ust=1640703506504000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj1jYSfhPUCFQAAAAAdAAAAABAD");
+background-image: url("mix_design/2960070_2_1.jpg");
 background-size: cover;
 }
 </style>
