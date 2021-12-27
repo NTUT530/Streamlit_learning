@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown('<style>body{background-color: Light Blue;}</style>',unsafe_allow_html=True)
+st.markdown('<style>body{background-color: Light lue;}</style>',unsafe_allow_html=True)
 
 st.header('基於 IS 10262 的混凝土混合設計：2009（印度標準）混凝土混合比例')
 col1,col2 = st.beta_columns(2)
