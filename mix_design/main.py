@@ -11,9 +11,9 @@ with col1:
 #standard_dev = widgets.FloatSlider(value = 4,options=[3.5,4,5],description='Standard Deviation',style=style)
 #Max_Nominal_size_CA = st.slider('Nominal Max size of Coarse Aggregate',min_value=10,max_value=40,value=20)
 with col2:
-    Max_Nominal_size_CA = st.text_input(label='Nominal Max size of Coarse Aggregate',value='20')
+    Max_Nominal_size_CA = st.text_input(label='粗骨料的標稱最大尺寸',value='20')
 
-Exposure_Condition = st.selectbox('Exposure Condition',['Mild','Moderate','Severe','Very Severe','Extreme'])
+Exposure_Condition = st.selectbox('曝光條件',['Mild','Moderate','Severe','Very Severe','Extreme'])
 
 #Minimum_Cement_Content = st.selectbox('最小水泥含量:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 
