@@ -248,8 +248,8 @@ div.stButton > button:first-child {
     color: #4F8BF9;
     border-radius: 50%;
     font-size:10px;
-    height: 10em;
-    width: 10em;
+    height: 1em;
+    width: 1em;
 }
 div.stButton > button:hover {
     background-color: #00ff00;
