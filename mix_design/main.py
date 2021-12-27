@@ -114,7 +114,7 @@ col6,col7 = st.beta_columns(2)
 with col6:
     Prac_WC_Ratio = st.slider(label='輸入水泥與水比例',value=0.5,min_value=0.4,max_value=0.8)
 with col7:
-    Workability = st.slider(value=50.00,min_value=10.00,max_value=500.00,step=5.00,label='坍度(')
+    Workability = st.slider(value=50.00,min_value=10.00,max_value=500.00,step=5.00,label='坍度(mm)')
 
 col8,col9 = st.beta_columns(2)
 with col8:
