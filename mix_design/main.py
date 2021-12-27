@@ -103,7 +103,7 @@ with col3:
 with col4:
     Max_WC_Ratio = c[1]
     f=str(c[1])
-    ff=st.text_input(label='最大WC比例',value=f)
+    ff=st.text_input(label='最大比合',value=f)
 
 with col5:
     Max_Wcontet_CAgg=c[2]
