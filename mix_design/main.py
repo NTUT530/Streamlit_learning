@@ -248,8 +248,8 @@ div.stButton > button:first-child {
     color: #4F8BF9;
     border-radius: 50%;
     font-size:10px;
-    height: 1em;
-    width: 1em;
+    height: 5em;
+    width: 5em;
 }
 div.stButton > button:hover {
     background-color: #00ff00;
@@ -258,7 +258,7 @@ div.stButton > button:hover {
 </style>""", unsafe_allow_html=True)
 co1, co2, co3 = st.beta_columns(3)
 with co2:
-    buttom=st.button("👌")
+    buttom=st.button("O👌K")
 #buttom=st.button("👌")
 if buttom:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
