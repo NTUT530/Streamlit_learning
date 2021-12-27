@@ -123,7 +123,7 @@ with col9:
     reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='減少混泥土配比')
 
 
-Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='水泥潤滑劑')
+Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='水泥潤滑劑(kg)')
 
 col12,col13 = st.beta_columns(2)
 with col12:
