@@ -256,7 +256,7 @@ div.stButton > button:hover {
     color:#ff0000;
     }
 </style>""", unsafe_allow_html=True)
-buttom=st.button.markdown("👌")
+buttom=st.button("👌")
 if buttom:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
     #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
