@@ -221,7 +221,7 @@ P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2
 
 ##
 #st.write('<span style="color:red;background:pink">"="*25+"    結果:    "+"="*25</span>',unsafe_allow_html=True)
-st.subheader('<span style="color:red;background:pink">"="*25+"    結果:    "+"="*25</span>',unsafe_allow_html=True)
+st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
 a=fck_st(Grade_designation)
 b=str(a)
