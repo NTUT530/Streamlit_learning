@@ -127,7 +127,7 @@ Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,
 
 col12,col13 = st.beta_columns(2)
 with col12:
-    Zone = st.selectbox('Zone_FA',['Zone I','Zone II','Zone III','Zone IV'])
+    Zone = st.selectbox('限制點火源能量',['隔爆型','增安型','正壓型','粉塵防爆型'])
  
 ##From IS456:2000
 
@@ -171,11 +171,11 @@ def Vol_CATA_ratio(Max_Nominal_size_CA,Zone):
     if Max_Nominal_size_CA == '20':
 
             ## to change value based on exposure condition
-            if Zone == 'Zone I':
+            if Zone == '隔爆型':
                 Vol_CA_TA = 0.6
-            elif Zone == 'Zone II':
+            elif Zone == '增安型':
                 Vol_CA_TA = 0.62
-            elif Zone == 'Zone III':
+            elif Zone == '正壓型':
                 Vol_CA_TA = 0.64
             else:
                 Vol_CA_TA = 0.66
@@ -183,22 +183,22 @@ def Vol_CATA_ratio(Max_Nominal_size_CA,Zone):
 
     elif Max_Nominal_size_CA == '10':
 
-            if Zone == 'Zone I':
+            if Zone == '隔爆型':
                 Vol_CA_TA = 0.44
-            elif Zone == 'Zone II':
+            elif Zone == '增安型':
                 Vol_CA_TA = 0.46
-            elif Zone == 'Zone III':
+            elif Zone == '正壓型':
                 Vol_CA_TA = 0.48
             else:
                 Vol_CA_TA = 0.50
 
 
     else:
-            if Zone == 'Zone I':
+            if Zone == '隔爆型':
                 Vol_CA_TA = 0.69
-            elif Zone == 'Zone II':
+            elif Zone == '增安型':
                 Vol_CA_TA = 0.71
-            elif Zone == 'Zone III':
+            elif Zone == '正壓型':
                 Vol_CA_TA = 0.73
             else:
                 Vol_CA_TA = 0.75
