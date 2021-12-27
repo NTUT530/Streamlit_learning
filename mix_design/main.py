@@ -297,13 +297,13 @@ Str_Admixture = str(round(Cement[8],2))
 st.subheader('最終比例 :')
 col14,col15,col16 = st.beta_columns(3)
 with col14:
-    st.text_input('Cement',value=Str_cement)
+    st.text_input('水泥',value=Str_cement)
 with col15:
-    st.text_input('Fine Aggregate',value=Str_FA)
+    st.text_input('細骨料',value=Str_FA)
 with col16:
-    st.text_input('Coarse Aggregate',value=Str_CA)
+    st.text_input('粗骨料',value=Str_CA)
 
-st.latex(r'''Mass_per_volume : (kg/m^3)''')
+st.latex(r'''質量體積比: (kg/m^3)''')
 
 col17,col18,col19 = st.beta_columns(3)
 with col17:
