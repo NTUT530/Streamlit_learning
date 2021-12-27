@@ -16,7 +16,7 @@ st.markdown(
 )
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
-st.write('<span style="color: Blue><font size="24"><center>IS 10262 混凝土混合設計 - 混凝土混合比例</center></font></span>',unsafe_allow_html=True)
+st.write('<font size="24"><span style="color: Blue><center>IS 10262 混凝土混合設計 - 混凝土混合比例</center></span></font>',unsafe_allow_html=True)
 
 col1,col2 = st.beta_columns(2)
 with col1:
