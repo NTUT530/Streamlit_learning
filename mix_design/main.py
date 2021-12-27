@@ -294,7 +294,7 @@ Str_CA_Content=str(round(Cement[6]))
 Str_FA_Content=str(round(Cement[7]))
 Str_Admixture = str(round(Cement[8],2))
 
-st.subheader('Final Ratio :')
+st.subheader('最終比例 :')
 col14,col15,col16 = st.beta_columns(3)
 with col14:
     st.text_input('Cement',value=Str_cement)
