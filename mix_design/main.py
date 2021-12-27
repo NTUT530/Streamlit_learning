@@ -16,7 +16,7 @@ st.markdown(
 )
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
-st.write('<font size="8"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
+st.write('<font size="7"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 
 
 ##
