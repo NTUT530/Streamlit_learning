@@ -15,7 +15,7 @@ with col2:
 
 Exposure_Condition = st.selectbox('Exposure Condition',['Mild','Moderate','Severe','Very Severe','Extreme'])
 
-#Minimum_Cement_Content = st.selectbox('Min Cement Content:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
+#Minimum_Cement_Content = st.selectbox('最小水泥含量:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 
 #Max_WC_Ratio = st.text_area(label='Max WC Ratio',value='0.5')   ## Maximum water cement ratio from table
 ##From IS456:2000
