@@ -23,19 +23,19 @@ def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
     ## to change value on max CA size
     if Max_Nominal_size_CA == '20':
             ## to change value based on exposure condition
-            if Exposure_Condition == 'Mild':
+            if Exposure_Condition == '軟':
                 Minimum_Cement_Content = 300
                 Max_WC_Ratio = 0.55
                 Max_Wcontet_CAgg = 186
-            elif Exposure_Condition == 'Moderate':
+            elif Exposure_Condition == '中等':
                 Minimum_Cement_Content = 300
                 Max_WC_Ratio = 0.5
                 Max_Wcontet_CAgg = 186
-            elif Exposure_Condition == 'Severe':
+            elif Exposure_Condition == '硬':
                 Minimum_Cement_Content = 320
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 186
-            elif Exposure_Condition == 'Very Severe':
+            elif Exposure_Condition == '非常硬':
                 Minimum_Cement_Content = 340
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 186
@@ -47,19 +47,19 @@ def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
 
     elif Max_Nominal_size_CA == '10':
 
-            if Exposure_Condition == 'Mild':
+            if Exposure_Condition == '軟':
                 Minimum_Cement_Content = 340
                 Max_WC_Ratio = 0.55
                 Max_Wcontet_CAgg = 208
-            elif Exposure_Condition == 'Moderate':
+            elif Exposure_Condition == '中等':
                 Minimum_Cement_Content = 340
                 Max_WC_Ratio = 0.50
                 Max_Wcontet_CAgg = 208
-            elif Exposure_Condition == 'Severe':
+            elif Exposure_Condition == '硬':
                 Minimum_Cement_Content = 360
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 208
-            elif Exposure_Condition == 'Very Severe':
+            elif Exposure_Condition == '非常硬':
                 Minimum_Cement_Content = 380
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 208
@@ -69,19 +69,19 @@ def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
                 Max_Wcontet_CAgg = 208
     else:
             ## Max CA size = 40 mm
-            if Exposure_Condition == 'Mild':
+            if Exposure_Condition == '軟':
                 Minimum_Cement_Content = 270
                 Max_WC_Ratio = 0.55
                 Max_Wcontet_CAgg = 165
-            elif Exposure_Condition == 'Moderate':
+            elif Exposure_Condition == '中等':
                 Minimum_Cement_Content = 270
                 Max_WC_Ratio = 0.50
                 Max_Wcontet_CAgg = 165
-            elif Exposure_Condition == 'Severe':
+            elif Exposure_Condition == '硬':
                 Minimum_Cement_Content = 290
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 165
-            elif Exposure_Condition == 'Very Severe':
+            elif Exposure_Condition == '非常硬':
                 Minimum_Cement_Content = 310
                 Max_WC_Ratio = 0.45
                 Max_Wcontet_CAgg = 165
