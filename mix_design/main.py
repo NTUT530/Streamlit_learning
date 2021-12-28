@@ -24,7 +24,8 @@ st.write('<font size="7"><center><b>IS 10262 混凝土混合設計<br>混凝土�
 
 col1,col2 = st.beta_columns(2)
 with col1:
-    Grade_designation = st.selectbox("等級",['M10','M15','M20','M25','M30','M35','M40'])
+    st.write("等級")
+    Grade_designation = st.selectbox("",['M10','M15','M20','M25','M30','M35','M40'])
 #CA = Coarse Aggregate (粗骨料)
 #W_C= Water content (含水量)
 #charact_str = widgets.Dropdown(value = 20,options=[10,15,20,25,30,35,40],description='fck')
