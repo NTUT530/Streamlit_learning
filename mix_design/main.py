@@ -22,11 +22,12 @@ with col2:
      color2 = ( '#00ff00')
 with col3:
      color3 = ('#ffffff')
-text=('IS 10262 混凝土混合設計 混凝土混合比例')
+text1=('IS 10262 混凝土混合設計')
+text2=('混凝土混合比例')
 
 def example(color1, color2, color3, content):
      st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:30px;border-radius:20%;">{content}</p>', unsafe_allow_html=True)
-example(color1,color2,color3,text)
+example(color1,color2,color3,text1,text2)
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
 #st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
