@@ -19,7 +19,7 @@ st.markdown(
 
 col1, col2 ,col3= st.beta_columns(3)
 with col1:
-     color1 = st.color_picker('#1aa3ff')
+     color1 = color_picker('#1aa3ff')
 with col2:
      color2 = st.color_picker('结尾颜色', '#00ff00',key=2)
 with col3:
