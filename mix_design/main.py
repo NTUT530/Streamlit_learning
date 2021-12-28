@@ -26,7 +26,7 @@ text1=('IS 10262 混凝土混合設計')
 text2=('混凝土混合比例')
 
 def example(color1, color2, color3, text1,text2):
-     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:30px;border-radius:20%;">{text1}<br>{text2}</p>', unsafe_allow_html=True)
+     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:30px;font-face:"微軟正黑體";border-radius:20%;">{text1}<br>{text2}</p>', unsafe_allow_html=True)
 example(color1,color2,color3,text1,text2)
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
