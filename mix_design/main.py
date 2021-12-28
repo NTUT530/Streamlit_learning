@@ -17,7 +17,8 @@ st.markdown(
 h1{
     font-size: 72px;
     background: linear-gradient(red, yellow, green, blue);
-i
+
+
 -webkit-background-clip: text;
 
     color: transparent;
