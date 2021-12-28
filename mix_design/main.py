@@ -229,7 +229,7 @@ with col13:
     Vol_Cata = Vol_CATA_ratio(Max_Nominal_size_CA,Zone)
     Vol_CA_TA=Vol_Cata
     h = str(Vol_Cata)
-    h_final = st.text_input(label='Ratio of volume of CA and TA : ',value=h)#######################################################################################
+    h_final = st.text_input(label='添加劑與粗骨料體積比 : ',value=h)
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
 st.sidebar.subheader('材料比重 :')
@@ -267,7 +267,7 @@ if buttom:
 
     a=fck_st(Grade_designation)
     b=str(a)
-    st.text_input(label='fck (kN/mm²)',value=b)
+    st.text_input(label='混凝土(KN/mm²)',value=b)
 
     ##Ratio of aggregates
     def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air):
