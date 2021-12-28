@@ -21,9 +21,9 @@ col1, col2 ,col3= st.beta_columns(3)
 with col1:
      color1 = ('#1aa3ff')
 with col2:
-     color2 = st.color_picker('结尾颜色', '#00ff00',key=2)
+     color2 = ( '#00ff00')
 with col3:
-     color3 = st.color_picker('文字颜色', '#ffffff',key=3)
+     color3 = ('#ffffff')
 text=('IS 10262 混凝土混合設計 混凝土混合比例')
 
 def example(color1, color2, color3, content):
