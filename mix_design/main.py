@@ -269,7 +269,7 @@ div.stButton > button:hover {
     color:#ff0000;
     }
 </style>""", unsafe_allow_html=True)
-co1, co2, co3 ,co4 ,co5 ,co6 ,co7, co8, co9= st.beta_columns(9)
+co1, co2, co3 ,co4 ,co5 ,co6 ,co7, co8, co9,co10= st.beta_columns(10)
 with co5:
     buttom=st.button("O👌K")
 #buttom=st.button("👌")
