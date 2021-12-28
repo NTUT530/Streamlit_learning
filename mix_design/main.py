@@ -19,7 +19,7 @@ col1, col2 ,col3= st.beta_columns(3)
 with col1:
      color1 = ('#1aa3ff')
 with col2:
-     color2 = ( '#00ff00')
+     color2 = ('#f059ed')
 with col3:
      color3 = ('#ffffff')
 text1=('IS 10262 混凝土混合設計')
