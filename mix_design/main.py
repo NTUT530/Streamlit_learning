@@ -25,7 +25,7 @@ with col3:
 text=('IS 10262 混凝土混合設計 混凝土混合比例')
 
 def example(color1, color2, color3, content):
-     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:45px;border-radius:2%;">{content}</p>', unsafe_allow_html=True)
+     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:30px;border-radius:2%;">{content}</p>', unsafe_allow_html=True)
 example(color1,color2,color3,text)
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
