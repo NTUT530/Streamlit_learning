@@ -270,7 +270,7 @@ div.stButton > button:hover {
     }
 </style>""", unsafe_allow_html=True)
 co1, co2, co3 = st.beta_columns(3)
-with co2:
+with co3:
     buttom=st.button("O👌K")
 #buttom=st.button("👌")
 if buttom:
