@@ -16,24 +16,24 @@ st.markdown(
 )
 
 
-#st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
-#st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
-st.write('<font size="7" face="微軟正黑體"><center><h1><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></h1></center></font>',unsafe_allow_html=True)
+
 col1, col2 ,col3= st.beta_columns(3)
 with col1:
      color1 = st.color_picker('选择渐变起始颜色', '#1aa3ff',key=1)
-     st.write(f"你选择了{color1}")
 with col2:
      color2 = st.color_picker('选择渐变结尾颜色', '#00ff00',key=2)
-     st.write(f"你选择了{color2}")
 with col3:
      color3 = st.color_picker('选择文字颜色', '#ffffff',key=3)
-     st.write(f"你选择了{color3}")
-text=st.text_input("请输入你要添加的文字")
+text=st.write('<font size="7" face="微軟正黑體"><center><h1><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></h1></center></font>',unsafe_allow_html=True)
 
 def example(color1, color2, color3, content):
      st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:24px;border-radius:2%;">{content}</p>', unsafe_allow_html=True)
 example(color1,color2,color3,text)
+
+#st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
+#st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
+#st.write('<font size="7" face="微軟正黑體"><center><h1><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></h1></center></font>',unsafe_allow_html=True)
+
 
 ##
 col1,col2 = st.beta_columns(2)
