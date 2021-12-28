@@ -33,7 +33,7 @@ with col1:
 with col2:
     Max_Nominal_size_CA = st.text_input(label='粗骨料的標稱最大尺寸(mm)',value='20')
 
-Exposure_Condition = st.selectbox('軟硬程度',['軟','中等','硬','非常硬','極限'])
+Exposure_Condition = st.selectbox('軟硬程度',['軟','中等','硬','非常硬'])
 
 #Minimum_Cement_Content = st.selectbox('最小水泥含量:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 
