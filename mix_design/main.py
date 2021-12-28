@@ -118,21 +118,21 @@ with col3:
     c=max_CA_change(Max_Nominal_size_CA,Exposure_Condition)
     Minimum_Cement_Content = c[0]
     d=str(c[0])
-    dd=st.text_input(label='最低水泥含量',value=d)
+    dd=st.text_input(label='最低水泥含量(kg)',value=d)
 
 with col4:
     Max_WC_Ratio = c[1]
     f=str(c[1])
-    ff=st.text_input(label='最大水泥比例',value=f)
+    ff=st.text_input(label='最大水泥比例(%)',value=f)
 
 with col5:
     Max_Wcontet_CAgg=c[2]
     g=str(c[2])
-    gg=st.text_input(label='最大水泥比重',value=g)
+    gg=st.text_input(label='最大水泥比重(kg)',value=g)
 
 col6,col7 = st.beta_columns(2)
 with col6:
-    Prac_WC_Ratio = st.slider(label='輸入砂漿比例',value=0.5,min_value=0.4,max_value=0.8)
+    Prac_WC_Ratio = st.slider(label='輸入砂漿比例(%)',value=0.5,min_value=0.4,max_value=0.8)
 with col7:
     Workability = st.slider(value=50.00,min_value=10.00,max_value=500.00,step=5.00,label='坍度(mm)')
 
@@ -229,10 +229,10 @@ with col13:
     Vol_Cata = Vol_CATA_ratio(Max_Nominal_size_CA,Zone)
     Vol_CA_TA=Vol_Cata
     h = str(Vol_Cata)
-    h_final = st.text_input(label='添加劑與粗骨料體積比 : ',value=h)
+    h_final = st.text_input(label='添加劑與粗骨料體積比(%) : ',value=h)
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
-st.sidebar.subheader('材料比重 :')
+st.sidebar.subheader('材料比重(%) :')
 Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label="水泥")
 Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='粗骨料')
 Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,label='細骨料')
