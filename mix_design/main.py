@@ -15,11 +15,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-h1{font-size: 72px;background: linear-gradient(red, yellow, green, blue);-webkit-background-clip: text;color: transparent;}
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
 #st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
-st.write('<font size="7" face="微軟正黑體"><center><h1><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b><h1></center></font>',unsafe_allow_html=True)
+st.write('<font size="7" face="微軟正黑體"><center><h1><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></h1></center></font>',unsafe_allow_html=True)
+h1{font-size: 72px;background: linear-gradient(red, yellow, green, blue);-webkit-background-clip: text;color: transparent;}
 
 ##
 col1,col2 = st.beta_columns(2)
