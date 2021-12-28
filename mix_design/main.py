@@ -14,16 +14,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-h1{
-    font-size: 72px;
-    background: linear-gradient(red, yellow, green, blue);
+#h1{
+#    font-size: 72px;
+#    background: linear-gradient(red, yellow, green, blue);
 
 
--webkit-background-clip: text;
+#-webkit-background-clip: text;
 
-    color: transparent;
+ #   color: transparent;
 
-  }
+ # }
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
 #st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
