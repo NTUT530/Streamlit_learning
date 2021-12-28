@@ -14,10 +14,19 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+h1{
+    font-size: 72px;
+    background: linear-gradient(red, yellow, green, blue);
+i
+-webkit-background-clip: text;
+
+    color: transparent;
+
+  }
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
+#st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
-
 
 ##
 #li1=st.markdown("""<style>.standard-text{font-size:16px;}.title{font-size:36px;}.sidebar-text{font-size:26px;}. subheader{font-size:20px}</style>""",unsafe_allow_html=True)
