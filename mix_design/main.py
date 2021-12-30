@@ -296,18 +296,23 @@ div.stButton > button:hover {
     color:#ff0000;
     }
 </style>""", unsafe_allow_html=True)
+#button center
 co1, co2, co3 ,co4 ,co5 ,co6 ,co7, co8, co9,co10= st.beta_columns(10)
 with co5:
     button=st.button("O👌K")
 #buttom=st.button("👌")
 if button:
+    
+    ###small title
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
     #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
     a=fck_st(Grade_designation)
     b=str(a)
     st.text_input(label='混凝土(KN/mm²)',value=b)
-
+    
+    
+    ###function4
     ##Ratio of aggregates
     def final_computation(Workability,Max_WC_Ratio,Max_Wcontet_CAgg,Prac_WC_Ratio,reduction,Vol_CA_TA,Gxa,Gca,Gcf,Gc,P_Air):
         adopted_Wc = min(Max_WC_Ratio, Prac_WC_Ratio)  ## lesser value
@@ -376,6 +381,8 @@ if button:
     Str_FA_Content=str(round(Cement[7]))
     Str_Admixture = str(round(Cement[8],2))
 
+    
+    ###small title
     #st.subheader('最終比例 :')
     st.write('<font size="5"><center><span style="color:black;background:#DDDDFF"><b>最終比例 :</b></span></center></font>',unsafe_allow_html=True)
 
@@ -387,6 +394,8 @@ if button:
     with col16:
         st.text_input('粗骨料',value=Str_CA)
 
+        
+    ###small title
     #st.latex(r'''質量體積比: (kg/m³)''')
     st.write('<font size="5"><center><span style="color:black;background:#D2E9FF"><b>質量體積比: (kg/m³)</b></span></center></font>',unsafe_allow_html=True)
     #
