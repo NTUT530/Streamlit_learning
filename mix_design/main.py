@@ -1,5 +1,6 @@
 import streamlit as st
 
+###background
 #st.markdown('<style>body{background-color: #D2E9FF;}</style>',unsafe_allow_html=True)
 st.markdown(
     """
@@ -15,32 +16,38 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2 ,col3 ,col4 ,col5 ,col6= st.beta_columns(6)
+
+###big title
+col1, col2 ,col3 ,col4 ,col5 ,col6 ,col7 ,col8 = st.beta_columns(8)
 with col1:
-     color1 = ('#1aa3ff')
+     color1 = ('#FF0000')
 with col2:
-     color2 = ('#f059ed')
+     color2 = ('#FF5809')
 with col3:
-     color3 = ('#ffffff')
+     color3 = ('#F9F900')
 with col4:
-    color4=('#FF2D2D')
+    color4=('#00EC00')
 with col5:
-    color5=('#0066CC')
+    color5=('#0072E3')
 with col6:
-    color6=('#9AFF02')
+    color6=('921AFF')
+with col7:
+    color7=('#D200D2')
+with col8:
+    color8=('#FFFFFF')
 
 text1=('IS 10262 混凝土混合設計')
 text2=('混凝土混合比例')
 
-def example(color1, color2, color3, color4, color5, color6, text1,text2):
-     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2} ,{color3} ,{color4} ,{color5});color:{color6};font-size:35px;border-radius:20%;"><font face="微軟正黑體"><b>{text1}<br>{text2}</b></font></p>', unsafe_allow_html=True)
-example(color1,color2,color3,color4,color5,color6,text1,text2)
+def example(color1, color2, color3, color4, color5, color6, color7, color8, text1,text2):
+     st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2} ,{color3} ,{color4} ,{color5} ,{color6} ,{color7});color:{color8};font-size:35px;border-radius:20%;"><font face="微軟正黑體"><b>{text1}<br>{text2}</b></font></p>', unsafe_allow_html=True)
+example(color1,color2,color3,color4,color5,color6,color7,color8,text1,text2)
 
 #st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
 #st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 
 
-##
+###selectbox 1 & 2
 col1,col2 = st.beta_columns(2)
 with col1:
     Grade_designation = st.selectbox("等級",['M10','M15','M20','M25','M30','M35','M40'])
@@ -54,8 +61,9 @@ with col2:
 
 Exposure_Condition = st.selectbox('軟硬程度',['軟','中等','硬','非常硬'])
 
-#Minimum_Cement_Content = st.selectbox('最小水泥含量:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 
+###function 1 Minimum_Cement_Content & Max_WC_Ratio & Max_Wcontet_CAgg
+#Minimum_Cement_Content = st.selectbox('最小水泥含量:kg/m3',[340,360,380,400,300,320,360,270,290,310,330])
 #Max_WC_Ratio = st.text_area(label='Max WC Ratio',value='0.5')   ## Maximum water cement ratio from table
 ##From IS456:2000
 def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
