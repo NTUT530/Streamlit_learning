@@ -22,17 +22,17 @@ col1, col2 ,col3 ,col4 ,col5 ,col6 ,col7 ,col8 = st.beta_columns(8)
 with col1:
      color1 = ('#FF0000')
 with col2:
-     color2 = ('#FF5809')
+     color2 = ('#FF5500')
 with col3:
-     color3 = ('#F9F900')
+     color3 = ('#EAFF00')
 with col4:
-    color4=('#00EC00')
+    color4=('#00FF00')
 with col5:
-    color5=('#0072E3')
+    color5=('#0000FF')
 with col6:
-    color6=('921AFF')
+    color6=('#D900FF')
 with col7:
-    color7=('#D200D2')
+    color7=('#FF0088')
 with col8:
     color8=('#FFFFFF')
 
