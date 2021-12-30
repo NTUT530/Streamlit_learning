@@ -140,6 +140,7 @@ def max_CA_change(Max_Nominal_size_CA,Exposure_Condition):
     return Minimum_Cement_Content,Max_WC_Ratio,Max_Wcontet_CAgg
 
 
+###textbox 最低水泥含量 & 最大水泥比例(%) & 最大水泥比重(kg)
 col3,col4,col5 = st.beta_columns(3)
 with col3:
     c=max_CA_change(Max_Nominal_size_CA,Exposure_Condition)
@@ -157,6 +158,8 @@ with col5:
     g=str(c[2])
     gg=st.text_input(label='最大水泥比重(kg)',value=g)
 
+    
+###slider 輸入砂漿比例 & 坍度 & 方法 & 減少混泥土配比 & 水泥潤滑劑
 col6,col7 = st.beta_columns(2)
 with col6:
     Prac_WC_Ratio = st.slider(label='輸入砂漿比例(%)',value=0.5,min_value=0.4,max_value=0.8)
@@ -169,15 +172,17 @@ with col8:
 with col9:
     reduction = st.slider(value=15,min_value=1,max_value=20,step=1,label='減少混泥土配比')
 
-
 Mass_Admixture_perc = st.slider(value=1.2,min_value=1.0,max_value=40.0,step=0.1,label='水泥潤滑劑(kg)')
 
+
+###selectbox2 限制點火源能量
 col12,col13 = st.beta_columns(2)
 with col12:
     Zone = st.selectbox('限制點火源能量',['隔爆型','增安型','正壓型','粉塵防爆型'])
  
-##From IS456:2000
 
+###function2 fck 混凝土
+##From IS456:2000
 def fck_st(Grade_designation):
     if Grade_designation == 'M10':
         charact_str = 10
@@ -212,6 +217,7 @@ def fck_st(Grade_designation):
     return fck
 
 
+###function3 限制點火源能量 & 添加劑與粗骨料體積比
 ##Ratio of volume of coarse aggregate to total volume of aggregate for different zones of fine aggregate table 3 of IS10262:2009
 def Vol_CATA_ratio(Max_Nominal_size_CA,Zone):
     ## to change value on max CA size
@@ -252,6 +258,8 @@ def Vol_CATA_ratio(Max_Nominal_size_CA,Zone):
 
     return Vol_CA_TA
 
+
+###添加劑與粗骨料體積比
 with col13:
     Vol_Cata = Vol_CATA_ratio(Max_Nominal_size_CA,Zone)
     Vol_CA_TA=Vol_Cata
@@ -259,6 +267,8 @@ with col13:
     h_final = st.text_input(label='添加劑與粗骨料體積比(%) : ',value=h)
 #Vol_CA_TA = st.slider(value = 0.69,min_value=0.44,max_value=0.75,step=0.01,label='Volume CA to TA Factor:')
 
+
+###slider材料比重
 st.sidebar.subheader('材料比重(%) :')
 Gc = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 2.93,label="水泥")
 Gca = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.82,label='粗骨料')
@@ -266,7 +276,9 @@ Gcf = st.sidebar.slider(min_value = 1.0,max_value =4.0,step = 0.01,value = 2.65,
 Gxa = st.sidebar.slider(min_value = 1.0,max_value=4.0,step = 0.01,value = 1.121,label='混合物')
 P_Air = st.sidebar.slider(min_value = 0.00,max_value =4.00,step = 0.01,value = 2.00,label='滯留空氣(%)')
 
-buttom = st.markdown("""
+
+###button
+button = st.markdown("""
 <style>
 div.stButton > button:first-child {
     background-color: #0099ff;
@@ -286,9 +298,9 @@ div.stButton > button:hover {
 </style>""", unsafe_allow_html=True)
 co1, co2, co3 ,co4 ,co5 ,co6 ,co7, co8, co9,co10= st.beta_columns(10)
 with co5:
-    buttom=st.button("O👌K")
+    button=st.button("O👌K")
 #buttom=st.button("👌")
-if buttom:
+if button:
     st.write('<font size="5"><center><span style="color:black;background:#DCB5FF"><b>結果 :</b></span></center></font>',unsafe_allow_html=True)
     #st.subheader('<span style="color:red;background:pink">結果:</span>',unsafe_allow_html=True)
 
