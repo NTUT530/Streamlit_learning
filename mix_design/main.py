@@ -293,7 +293,7 @@ div.stButton > button:first-child {
 }
 div.stButton > button:hover {
     background-color: #CC00FF;
-    color:#ff0000;
+    color:#FFFFFF;
     }
 </style>""", unsafe_allow_html=True)
 #button center
