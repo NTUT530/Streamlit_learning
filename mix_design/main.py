@@ -292,7 +292,7 @@ div.stButton > button:first-child {
     width: 5em;
 }
 div.stButton > button:hover {
-    background-color: #CC00FF;
+    background-color: #E93EFF;
     color:#FFFFFF;
     }
 </style>""", unsafe_allow_html=True)
