@@ -17,6 +17,8 @@ st.markdown(
 )
 
 
+#st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
+#st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
 ###big title
 col1, col2 ,col3 ,col4 ,col5 ,col6 ,col7 ,col8 = st.beta_columns(8)
 with col1:
@@ -42,10 +44,6 @@ text2=('混凝土混合比例')
 def example(color1, color2, color3, color4, color5, color6, color7, color8, text1,text2):
      st.markdown(f'<p style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2} ,{color3} ,{color4} ,{color5} ,{color6} ,{color7});color:{color8};font-size:35px;border-radius:20%;"><font face="微軟正黑體"><b>{text1}<br>{text2}</b></font></p>', unsafe_allow_html=True)
 example(color1,color2,color3,color4,color5,color6,color7,color8,text1,text2)
-
-#st.header('IS 10262 混凝土混合設計 - 混凝土混合比例')
-#st.write('<font size="7" face="微軟正黑體"><center><b>IS 10262 混凝土混合設計<br>混凝土混合比例</b></center></font>',unsafe_allow_html=True)
-
 
 ###selectbox 1 & 2
 col1,col2 = st.beta_columns(2)
