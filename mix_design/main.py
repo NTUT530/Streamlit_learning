@@ -8,9 +8,9 @@ st.markdown(
     .reportview-container {
         background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/image.PNG?raw=true")
     }
-   .sidebar .sidebar-content {
-        background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/image.PNG?raw=true")
-    }
+   #.sidebar .sidebar-content {
+   #     background: url("https://github.com/NTUT530/Streamlit_learning/blob/main/mix_design/image.PNG?raw=true")
+    #}
     </style>
     """,
     unsafe_allow_html=True
